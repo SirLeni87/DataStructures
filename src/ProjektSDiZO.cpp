@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 #include "List.h"
+#include "BinaryHeap.h"
+#include <cmath>
+#include "Array.h"
 
 using namespace std;
 
@@ -15,67 +18,39 @@ bool running = true;
 int main(int argc, char **argv) {
 	cout << "Which type to generate?" <<endl;
 
-	List L;
+BinaryHeap B;
 
-	L.display();
-	for(int i = 5; i < 100; i += 5)
-	{
-		L.pushFront(i);
-	}
+B.add(7);
+B.display();
+B.add(5);
+B.display();
+B.add(9);
+B.display();
+B.add(6);
+B.display();
+B.add(7);
+B.display();
+B.add(8);
+B.display();
+B.add(10);
+B.display();
+B.add(1);
+B.display();
+B.add(11);
+B.display();
 
-	for(int i = 1000; i < 2000; i += 100)
-		{
-			L.pushBack(i);
-		}
+cout << "It's dispose time! \n" << endl;
 
-	L.display();
-	if(L.search(5))
-		cout << "It's there" << endl;
-	else
-			cout << "It's not there" << endl;
-
-	if(L.search(450))
-	{
-		cout << "It's there" << endl;
-	}
-	else
-		cout << "It's not there" << endl;
-
-	List L2;
-
-	for(int i = 1000; i < 2000; i += 100)
-			{
-				L2.pushBack(i);
-			}
-	L2.display();
-
-	L2.popFront();
-	L2.popFront();
-
-	L2.display();
-
-	cout <<"Now it's popBetween time \n" << endl;
-
-	L.popBetween(30);
-	L.popBetween(9435430);
-	L.popBetween(1000);
-	L.popBetween(1500);
-	L.popBetween(95);
-	L.popBetween(1900);
-	L.display();
-
-	cout <<"Now it's pushInto time \n" << endl;
-
-	L2.pushInto(-5, 500);
-	L2.pushInto(700, 500);
-	L2.pushInto(0, 999);
-	L2.pushInto(8, 999);
-	L2.pushInto(10, 999);
-	L2.pushInto(5, 999);
-	L2.pushInto(5, 999);
-	L2.pushInto(5, 999);
-
-	L2.display();
+B.dispose(11);
+B.display();
+B.dispose(10);
+B.display();
+B.dispose(7);
+B.display();
+B.dispose(8);
+B.display();
+B.dispose(9);
+B.display();
 
 /*
 	while(running)
